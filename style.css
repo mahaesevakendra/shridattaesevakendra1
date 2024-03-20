@@ -135,7 +135,7 @@ a, button {
 .quote .play {
 	margin-top: 20px;
 	display: flex;
-	/* justify-content: center; */
+	justify-content: center;
 	align-items: center;
 }
 .quote .play img {
@@ -383,7 +383,7 @@ a, button {
 }
 
 /*TEAM SECTION*/
-.totalcard {
+/* .totalcard {
 	width: 100%;
 	display: flex;
 	flex-wrap: wrap;
@@ -396,7 +396,28 @@ a, button {
 	width: 300px;
 	border-radius: 10px;
 	background: #fff;
-}
+} */
+.totalcard {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: stretch; /* Changed from center to stretch */
+	justify-content: center;
+	margin-bottom: 50px;
+  }
+  
+  .totalcard .card {
+	margin: 50px;
+	width: 300px;
+	border-radius: 10px;
+	background: #fff;
+	display: flex; /* Added display flex */
+	flex-direction: column; /* Added flex-direction column */
+	flex: 1; /* Added flex: 1 to make all cards equal height */
+	box-shadow: inset 0 0 10px rgba(0,0,0,0.4),
+				0 0 10px rgba(0,0,0,0.3);
+  }
+  
 .totalcard .card{
 	box-shadow: inset 0 0 10px rgba(0,0,0,0.4),
 					0 0 10px rgba(0,0,0,0.3);
@@ -415,6 +436,13 @@ a, button {
 	box-shadow: inset 0px 0px 10px rgba(0,0,255,0.5),
 				1px 1px 30px rgba(0,0,255,0.5);
 }
+.card:nth-child(3){
+	border-top: 5px solid green;
+}
+.card:nth-child(3):hover {
+	box-shadow: inset 0px 0px 10px rgba(0,255,0,0.5),
+				1px 1px 30px rgba(0,255,0,0.5);
+}
 .totalcard .card img {
 	width: 100px;
 	height: 100px;
@@ -428,15 +456,23 @@ a, button {
 	border-radius: 0;
 	box-shadow: 0 0 20px rgba(0,0,0,0.5);
 }
-#detail p{
+#detail {
+	display: flex; /* Added display flex */
+	flex-direction: column; /* Added flex-direction column */
+	justify-content: space-between; /* Added justify-content */
+	height: 100%; /* Added height 100% */
+  }
+  
+  #detail p {
 	font-size: 15px;
 	line-height: 25px;
 	font-variant: small-caps;
 	text-align: center;
 	margin: 25px;
-	margin-bottom: 0px;
-	margin-top: 0px;
-}
+	margin-bottom: 0px; /* Adjusted margin-bottom */
+	margin-top: 0px; /* Adjusted margin-top */
+	flex-grow: 1; /* Added flex-grow */
+  }
 #detail button {
 	outline: none;
 	border-radius: 10px;
@@ -905,3 +941,71 @@ footer .btn:hover {
 		width: 100%;
 	}
 }
+
+.marquee {
+	background: linear-gradient(to right, #4CAF50, #8BC34A);
+	margin-top: 50px;
+	white-space: nowrap;
+	overflow: hidden;
+	box-sizing: border-box;
+  }
+  .marquee div {
+	display: inline-block;
+	padding-left: 100%;
+	animation: marquee 20s linear infinite;
+  }
+  @keyframes marquee {
+	0% { transform: translateX(0); }
+	100% { transform: translateX(-100%); }
+  }
+  
+  
+  .quote h4 {
+	font-size: 1em; /* Adjust the base font size as needed */
+	margin: 10px 0;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+	.quote h4 {
+	  font-size: 0.8em; /* Smaller font size for tablet devices */
+	  padding-left: 30px;
+	}
+  }
+  
+  @media (max-width: 480px) {
+	.quote h4 {
+	  font-size: 0.7em; /* Even smaller font size for mobile devices */
+	  padding-left: 30px;
+	}
+  }
+  .btn-roshan {
+	padding: 1em 2em; /* Use em units for padding */
+	font-size: 1em; /* Use em units for font size */
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: background-color 0.3s;
+  }
+  
+  /* Adjust button size on smaller screens */
+  @media (max-width: 768px) {
+	.btn-roshan {
+	  padding: 0.8em 1.5em; /* Smaller padding */
+	  font-size: 0.9em; /* Smaller font size */
+	  width: auto; /* Reset any previous width settings */
+	  margin: 0.5em 0;
+	}
+  }
+  
+  /* Adjust button size on even smaller screens */
+  @media (max-width: 480px) {
+	.btn-roshan {
+	  padding: 0.7em 1em; /* Even smaller padding */
+	  font-size: 0.8em; /* Even smaller font size */
+	  width: 100%; /* Full width buttons */
+	  width: auto; /* Reset any previous width settings */
+	  margin: 0.5em 0;
+	}
+  }
+  

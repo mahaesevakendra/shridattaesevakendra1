@@ -1,40 +1,144 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>उपलब्ध सुविधा</title>
+<title>Cards with Tags</title>
 <style>
-  body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background-color: #f8f8f8;
-    padding: 20px;
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+  justify-content: center;
+}
+.card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  width: 200px;
+  padding: 15px;
+  margin: 10px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  transform: perspective(1000px) rotateY(0deg);
+  color: #333; /* Font color */
+}
+.card:hover {
+  transform: perspective(1000px) rotateY(10deg);
+  box-shadow: 0 10px 20px rgba(255, 165, 0, 0.5); /* Orange color shadow */
+}
+.card h2 {
+  margin: 0;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+  text-shadow: 2px 2px rgba(144, 238, 144, 0.7); /* Orange color text shadow */
+}
+.card h4 {
+  margin: 0;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+  text-shadow: 2px 2px rgba(144, 238, 144, 0.7); /* Orange color text shadow */
+}
+.tag {
+  background: #fff;
+  padding: 5px 10px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  font-size: 0.8em;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
   }
-  .question {
-    background-color: #fff;
+  .card {
+    width: auto;
+    max-width: 340px;
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
     padding: 10px;
-    border-radius: 5px;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
   }
-  .question h2 {
-    color: #333;
-  }
-  .answer {
-    background-color: #f0f0f0;
-    padding: 10px;
-    border-radius: 5px;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-  }
+}
+
 </style>
 </head>
 <body>
-  <div class="question">
-    <h2></h2>
-  </div>
-  <div class="answer">
-    <p>HTML stands for HyperText Markup Language. It is the standard markup language for creating web pages and web applications. HTML describes the structure of a web page using a series of elements, which can include headings, paragraphs, images, links, and more.</p>
-  </div>
+
+<div class="card">
+  <h2>उत्पन्न प्रमाणपत्र </h2>
+  <h4 class="tag">शुल्क १०० रुपये </h4>
+  <p class="tag">कुपन / मतदान कार्ड </p>
+  <p class="tag">आधार कार्ड </p>
+  
+</div>
+
+<!-- Repeat the card structure for the number of cards you need -->
+
+<div class="card">
+  <h2>डोमासाईल</h2>
+  <h4 class="tag">शुल्क १०० रुपये </h4>
+  <p class="tag">nationality/ SEC </p>
+  <p class="tag">शाळेचा दाखला / निर्गम </p>
+  <p class="tag">कुपन / मतदान कार्ड </p>
+</div>
+
+<div class="card">
+  <h2>नॉन क्रीमिलेयर / केंद्र OBC</h2>
+  <h4 class="tag">शुल्क ३९९ रुपये </h4>
+  <p class="tag"> तीन वर्षाचे उत्पन्न तहसील  </p>
+  <p class="tag">जातीचा दाखला </p>
+  <p class="tag">शाळेचा दाखला </p>
+  <p class="tag">आधार कार्ड
+  </p>
+  <p class="tag">कुपन / फोटो   </p>
+  
+</div>
+<div class="card">
+  <h2>EWS प्रमाणपत्र १०%</h2>
+  <h4 class="tag">शुल्क ३९९ रुपये </h4>
+  <p class="tag"> तीन वर्षाचे उत्पन्न तहसील  </p>
+  <p class="tag">शाळेचा दाखला वडील  </p>
+  <p class="tag">शाळेचा दाखला स्वतः  </p>
+  <p class="tag">डोमासाईल</p>
+  <p class="tag">1951 राष्ट्रीय उतारा  </p>
+  <p class="tag">पी टी आर ग्रामपंचायत  </p>
+  <p class="tag">फोटो वडील व मुलाचा  </p>
+  <p class="tag">आधार कार्ड/ कुपन </p>
+  
+</div>
+<div class="card">
+  <h2>अल्पभूधारक </h2>
+  <h4 class="tag">शुल्क ३९९ रुपये </h4>
+  <p class="tag"> 7/12, 8 अ</p>
+  <p class="tag">मंडळ पंचनामा </p>
+  <p class="tag">शाळेचा दाखला स्वतः  </p>
+  <p class="tag">कुपन / मतदान कार्ड </p>
+  
+  <p class="tag">आधार कार्ड </p>
+  
+</div>
+<div class="card">
+  <h2>जातीचा दाखला</h2>
+  <h4 class="tag">शुल्क ३९९ रुपये </h4>
+  <p class="tag">शाळेचा दाखला </p>
+  <p class="tag">वडील / चुलते आजोबा शाळेचे दाखले / जातीचा पुरावा  </p>
+  <p class="tag">भाऊ, बहीण जातीचा पुरावा </p>
+  <p class="tag">1951 राष्ट्रीय उतारा /खासरा प्रमाणपत्र  </p>
+  <p class="tag">फोटो वडील व मुलाचा  </p>
+  <p class="tag">आधार कार्ड/ कुपन </p>
+  
+</div>
+
+
+
+
 </body>
 </html>
