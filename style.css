@@ -383,7 +383,7 @@ a, button {
 }
 
 /*TEAM SECTION*/
-/* .totalcard {
+.totalcard {
 	width: 100%;
 	display: flex;
 	flex-wrap: wrap;
@@ -396,28 +396,7 @@ a, button {
 	width: 300px;
 	border-radius: 10px;
 	background: #fff;
-} */
-.totalcard {
-	width: 100%;
-	display: flex;
-	flex-wrap: wrap;
-	align-items: stretch; /* Changed from center to stretch */
-	justify-content: center;
-	margin-bottom: 50px;
-  }
-  
-  .totalcard .card {
-	margin: 50px;
-	width: 300px;
-	border-radius: 10px;
-	background: #fff;
-	display: flex; /* Added display flex */
-	flex-direction: column; /* Added flex-direction column */
-	flex: 1; /* Added flex: 1 to make all cards equal height */
-	box-shadow: inset 0 0 10px rgba(0,0,0,0.4),
-				0 0 10px rgba(0,0,0,0.3);
-  }
-  
+}
 .totalcard .card{
 	box-shadow: inset 0 0 10px rgba(0,0,0,0.4),
 					0 0 10px rgba(0,0,0,0.3);
@@ -456,23 +435,15 @@ a, button {
 	border-radius: 0;
 	box-shadow: 0 0 20px rgba(0,0,0,0.5);
 }
-#detail {
-	display: flex; /* Added display flex */
-	flex-direction: column; /* Added flex-direction column */
-	justify-content: space-between; /* Added justify-content */
-	height: 100%; /* Added height 100% */
-  }
-  
-  #detail p {
+#detail p{
 	font-size: 15px;
 	line-height: 25px;
 	font-variant: small-caps;
 	text-align: center;
 	margin: 25px;
-	margin-bottom: 0px; /* Adjusted margin-bottom */
-	margin-top: 0px; /* Adjusted margin-top */
-	flex-grow: 1; /* Added flex-grow */
-  }
+	margin-bottom: 0px;
+	margin-top: 0px;
+}
 #detail button {
 	outline: none;
 	border-radius: 10px;
