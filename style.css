@@ -407,24 +407,26 @@ a, button {
 .card:nth-child(1){
 	border-top: 5px solid green;
 }
-.card:nth-child(2){
+.card:nth-child(3){
 	border-top: 5px solid blue;
 }
 .card:nth-child(1):hover {
 	box-shadow: inset 0px 0px 10px rgba(0,255,0,0.5),
 				1px 1px 30px rgba(0,255,0,0.5);
 }
-.card:nth-child(2):hover {
+.card:nth-child(3):hover {
 	box-shadow: inset 0px 0px 10px rgba(0,0,255,0.5),
 				1px 1px 30px rgba(0,0,255,0.5);
 }
-.card:nth-child(3){
-	border-top: 5px solid green;
-}
-.card:nth-child(3):hover {
-	box-shadow: inset 0px 0px 10px rgba(0,255,0,0.5),
-				1px 1px 30px rgba(0,255,0,0.5);
-}
+.card:nth-child(2) {
+	border-top: 5px solid rgba(255, 165, 0, 0.5); /* Light orange color */
+  }
+  
+.card:nth-child(2):hover {
+	box-shadow: inset 0px 0px 10px rgba(255, 165, 0, 0.5),
+				1px 1px 30px rgba(255, 165, 0, 0.5);
+  }
+  
 .totalcard .card img {
 	width: 100px;
 	height: 100px;
