@@ -154,6 +154,9 @@ a, button {
 	width: 500px;
 	filter: drop-shadow(0 20px 10px rgba(0,0,0,0.2));
 }
+.address img{
+	width: 22px;
+}
 
 /* SIDE MENU */
 .menu {
